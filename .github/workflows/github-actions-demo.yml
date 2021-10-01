@@ -1,5 +1,12 @@
-name: GitHub Actions Demo
-on: [push]
+name: docs-lint
+on:
+  # Trigger the workflow on push or pull request, but only for the gh-pages branch
+  push:
+    branches:
+      - gh-pages
+  pull_request:
+    branches:
+      - gh-pages
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
